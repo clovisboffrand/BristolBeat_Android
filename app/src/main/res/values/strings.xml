@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WQME</string>
+
+    <string name="alert_ask_to_exit">Do you want to exit?</string>
+    <string name="alert_loading">Please wait...</string>
+
+    <!-- String Resources for Radio Screen -->
+    <string name="logo_content">A Community Outreach of \nAnderson University</string>
+
+    <!-- String Resources for Web Screen -->
+    <string name="Website">Website</string>
+
+    <!-- String Resources for Alarm Screen -->
+    <string name="alarm_screen_title">Wake Up to 98.7, The Song</string>
+    <string name="Current_Time">Current Time</string>
+    <string name="Set_Wake_Up_Time">Set Wake Up Time</string>
+    <string name="alarm_note">After setting the time on this screen,
+        change the volume as desired then stop the stream.
+        You must leave the app open for the alarm to work.</string>
+    <string name="Set_Alarm">Set Alarm</string>
+    <string name="Cancel_Alarm">Cancel Alarm</string>
+
+    <!-- String Resources for Social Page -->
+    <string name="Social">Social</string>
+
+    <!-- String Resource for Shout Out Page -->
+    <string name="shout_out">Shout Out</string>
+</resources>

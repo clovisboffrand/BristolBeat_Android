@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="layout_background">#ECECEC</color>
+    <color name="toolbar_color">#0E1E7D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="text_grey">#494949</color>
+    <color name="grey">#9a9a9a</color>
+    <color name="no_color">#00ffffff</color>
+    <color name="playback_background">#c6d1ea</color>
+
+    <color name="tab_bar_tint_color">#f3731c</color>
+    <color name="actionbar_tint_color">#f3731c</color>
+    <color name="global_tint_color">#f3731c</color>
+</resources>

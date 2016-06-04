@@ -1,0 +1,38 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+
+    <style name="iPhoneTheme" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@style/iPhoneAnimation.Window</item>
+    </style>
+
+    <style name="iPhoneAnimation" />
+
+    <style name="iPhoneAnimation.Window">
+        <item name="android:windowEnterAnimation">@anim/slide_bottom_to_top</item>
+        <item name="android:windowExitAnimation">@anim/slide_top_to_bottom</item>
+    </style>
+
+    <style name="Badge">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/iphone_bg_buble</item>
+        <item name="android:minWidth">18dp</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="NavigationBar">
+        <item name="android:layout_height">@dimen/navigationbar_height</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="MaterialAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/toolbar_color</item>
+        <item name="colorPrimaryDark">@color/toolbar_color</item>
+    </style>
+</resources>

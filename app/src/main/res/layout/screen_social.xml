@@ -12,7 +12,7 @@
         android:layout_alignParentTop="true"
         android:background="@color/actionbar_tint_color"
         android:gravity="center"
-        android:text="@string/shout_out"
+        android:text="@string/Social"
         android:textColor="@android:color/white"
         android:textSize="22sp"
         android:textStyle="bold" />

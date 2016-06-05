@@ -12,9 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -32,11 +29,9 @@ import java.io.InputStream;
 
 public class ShoutOutScreen extends CustomScreen implements OnClickListener {
 
-    WebView webContent;
     ProgressBar prgLoading;
     Button btnListen, btnRecord, btnPlay, btnSend;
 
-    String mUrl;
     RecordingHelper mRecordHelper;
 
     @Override
@@ -58,8 +53,6 @@ public class ShoutOutScreen extends CustomScreen implements OnClickListener {
         this.initComponents(view);
         this.setListeners();
 
-        this.loadData();
-
         return view;
     }
 
@@ -70,41 +63,16 @@ public class ShoutOutScreen extends CustomScreen implements OnClickListener {
 
     @Override
     protected void initData() {
-        mUrl = getString(R.string.request_url);
         mRecordHelper = new RecordingHelper();
     }
 
     @Override
     protected void initComponents(View container) {
-        webContent = (WebView) container.findViewById(R.id.webContent);
         prgLoading = (ProgressBar) container.findViewById(R.id.prgLoading);
         btnListen = (Button) container.findViewById(R.id.btnListen);
         btnRecord = (Button) container.findViewById(R.id.btnRecord);
         btnPlay = (Button) container.findViewById(R.id.btnPlay);
         btnSend = (Button) container.findViewById(R.id.btnSend);
-
-        webContent.setBackgroundColor(0x00000000);
-        webContent.setInitialScale(50);
-        webContent.getSettings().setSupportZoom(true);
-        webContent.getSettings().setUseWideViewPort(true);
-        webContent.getSettings().setLoadWithOverviewMode(true);
-
-        webContent.getSettings().setBuiltInZoomControls(false);
-
-        WebSettings webSettings = webContent.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        webContent.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
-            }
-
-            @Override
-            public void onPageFinished(WebView view, String url) {
-                prgLoading.setVisibility(View.GONE);
-            }
-        });
     }
 
     @Override
@@ -135,10 +103,6 @@ public class ShoutOutScreen extends CustomScreen implements OnClickListener {
         } else if (v.getId() == R.id.btnSend) {
             new UploadTask().execute();
         }
-    }
-
-    private void loadData() {
-        webContent.loadUrl(mUrl);
     }
 
     private void startRecord() {

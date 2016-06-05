@@ -142,6 +142,7 @@ public class RadioPlayerService {
 
     private IntentFilter makeIntentFilter() {
         IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(GetRecentPlaylist.ACTION_GET_LIST_RADIO_SONG_COMPLETE);
         intentFilter.addAction(ACTION_PLAY);
         intentFilter.addAction(ACTION_STOP);
         return intentFilter;

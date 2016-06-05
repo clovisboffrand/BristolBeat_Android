@@ -27,6 +27,7 @@ import com.radioserver.bristolbeat.R;
 import com.radioserver.bristolbeat.helpers.SharedAlgorithm;
 import com.radioserver.bristolbeat.models.RadioSong;
 import com.radioserver.bristolbeat.services.RadioPlayerService;
+import com.radioserver.bristolbeat.utils.CommonUtils;
 
 import java.util.List;
 
@@ -120,37 +121,11 @@ public class RecentPlaylistActivity extends Activity {
             String url = item.getThumbnailUrl();
             int logoId = R.drawable.img_logo;
             if (url != null && url.contains("http")) {
-                loadImage(thumbnail, url, logoId);
+                CommonUtils.loadImage(thumbnail, url, logoId);
             } else {
                 thumbnail.setImageResource(logoId);
             }
             return convertView;
         }
-    }
-
-    public void loadImage(ImageView imageView, String imageUrl, int blankResId) {
-        if (imageUrl != null && Patterns.WEB_URL.matcher(imageUrl).matches()) {
-            loadImage(imageView, imageUrl, blankResId, null);
-        } else {
-            imageView.setImageResource(blankResId);
-        }
-    }
-
-    public void loadImage(ImageView imageView, String imageUrl,
-                          int blankResId, ImageLoadingListener listener) {
-        DisplayImageOptions options = new DisplayImageOptions.Builder()
-                .showImageForEmptyUri(blankResId)
-                .showImageOnFail(blankResId)
-                .showImageForEmptyUri(blankResId)
-                .showImageOnLoading(blankResId)
-                .imageScaleType(ImageScaleType.EXACTLY)
-                .cacheOnDisk(true)
-                .cacheInMemory(true)
-                .resetViewBeforeLoading(false)
-                .build();
-        if (listener != null)
-            ImageLoader.getInstance().displayImage(imageUrl, imageView, options, listener);
-        else
-            ImageLoader.getInstance().displayImage(imageUrl, imageView, options);
     }
 }

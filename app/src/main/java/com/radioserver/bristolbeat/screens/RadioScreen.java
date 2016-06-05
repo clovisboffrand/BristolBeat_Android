@@ -52,6 +52,7 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
 
     @Override
     public void onResume() {
+        RadioPlayerService.getInstance().executeGetRecentSongs();
         getActivity().registerReceiver(mReceiver, makeIntentFilter());
         super.onResume();
     }

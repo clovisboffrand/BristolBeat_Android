@@ -17,8 +17,8 @@ import org.san.iphonestyle.CustomScreen;
 
 public class SocialScreen extends CustomScreen implements OnClickListener {
 
-    Button btnFacebook, btnTwitter, btnSMS, btnWebsite;
-    Button btnYoutube, btnCall, btnEmail, btnInstagram;
+    Button btnFacebook, btnTwitter, btnWebsite, btnCall, btnEmail;
+    Button btnInstagram, btnCalendar, btnBuilding, btnContests;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,12 +55,13 @@ public class SocialScreen extends CustomScreen implements OnClickListener {
     protected void initComponents(View container) {
         btnFacebook = (Button) container.findViewById(R.id.btnFacebook);
         btnTwitter = (Button) container.findViewById(R.id.btnTwitter);
-        btnYoutube = (Button) container.findViewById(R.id.btnYoutube);
         btnWebsite = (Button) container.findViewById(R.id.btnWebsite);
         btnCall = (Button) container.findViewById(R.id.btnCall);
-        btnSMS = (Button) container.findViewById(R.id.btnSMS);
         btnEmail = (Button) container.findViewById(R.id.btnEmail);
         btnInstagram = (Button) container.findViewById(R.id.btnInstagram);
+        btnCalendar = (Button) container.findViewById(R.id.btnCalendar);
+        btnBuilding = (Button) container.findViewById(R.id.btnBuilding);
+        btnContests = (Button) container.findViewById(R.id.btnContests);
 
         SharedAlgorithm.setupAdView((WebView) container.findViewById(R.id.adView), getActivity());
     }
@@ -69,12 +70,13 @@ public class SocialScreen extends CustomScreen implements OnClickListener {
     protected void setListeners() {
         btnFacebook.setOnClickListener(this);
         btnTwitter.setOnClickListener(this);
-        btnYoutube.setOnClickListener(this);
         btnWebsite.setOnClickListener(this);
         btnCall.setOnClickListener(this);
-        btnSMS.setOnClickListener(this);
         btnEmail.setOnClickListener(this);
         btnInstagram.setOnClickListener(this);
+        btnCalendar.setOnClickListener(this);
+        btnBuilding.setOnClickListener(this);
+        btnContests.setOnClickListener(this);
     }
 
     @Override
@@ -92,17 +94,20 @@ public class SocialScreen extends CustomScreen implements OnClickListener {
             case R.id.btnCall:
                 makeACall(getString(R.string.phone_number));
                 break;
-            case R.id.btnSMS:
-                sendSMS(getString(R.string.phone_number));
-                break;
             case R.id.btnEmail:
                 sendEmail(getString(R.string.email_address));
                 break;
             case R.id.btnInstagram:
                 goWebsite(getString(R.string.instagram_url));
                 break;
-            case R.id.btnYoutube:
-                goWebsite(getString(R.string.youtube_url));
+            case R.id.btnCalendar:
+                goWebsite(getString(R.string.calendar_url));
+                break;
+            case R.id.btnBuilding:
+                goWebsite(getString(R.string.advertisers_url));
+                break;
+            case R.id.btnContests:
+                goWebsite(getString(R.string.contests_url));
                 break;
         }
     }

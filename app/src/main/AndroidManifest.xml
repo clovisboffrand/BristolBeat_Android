@@ -61,6 +61,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/MaterialAppTheme" />
 
+        <activity
+            android:name="com.radioserver.bristolbeat.screens.RecentPlaylistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialAppTheme" />
+
         <receiver android:name="com.radioserver.bristolbeat.services.AlarmGoOffReceiver" />
 
         <service android:name="com.radioserver.bristolbeat.services.NotificationService" />

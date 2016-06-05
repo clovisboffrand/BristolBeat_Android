@@ -18,12 +18,14 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
 public class RadioScreen extends CustomScreen implements OnClickListener, OnSeekBarChangeListener {
 
-    private Button btnPlay, btnStop;
+    Button btnPlay, btnStop;
+    ImageView btnRecent;
     private SeekBar skbVolume;
 
     public static final String ACTION_VOLUME_CHANGE = "android.media.VOLUME_CHANGED_ACTION";
@@ -86,6 +88,7 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
 
         btnPlay = (Button) container.findViewById(R.id.btnPlay);
         btnStop = (Button) container.findViewById(R.id.btnStop);
+        btnRecent = (ImageView) container.findViewById(R.id.btn_recent_playlist);
         skbVolume = (SeekBar) container.findViewById(R.id.skbVolume);
 
         AudioManager audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
@@ -99,6 +102,7 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
     protected void setListeners() {
         btnPlay.setOnClickListener(this);
         btnStop.setOnClickListener(this);
+        btnRecent.setOnClickListener(this);
         skbVolume.setOnSeekBarChangeListener(this);
     }
 
@@ -111,6 +115,9 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
             case R.id.btnStop:
                 getActivity().sendBroadcast(new Intent(RadioPlayerService.ACTION_STOP));
                 btnPlay.setBackgroundResource(R.mipmap.ic_btn_play);
+                break;
+            case R.id.btn_recent_playlist:
+                startActivity(new Intent(getActivity(), RecentPlaylistActivity.class));
                 break;
         }
     }

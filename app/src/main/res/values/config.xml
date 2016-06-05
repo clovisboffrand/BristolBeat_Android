@@ -16,4 +16,6 @@
     <string name="sample_audio">http://www.bristolbeat.com/app/sample.mp3</string>
     <string name="upload_audio">http://radioserversapps.com/bristolbeat/app</string>
     <string name="request_url">http://bristolbeat.com/app/shoutoutimage.png</string>
+
+    <string name="feed_url">https://streamdb7web.securenetsystems.net/player_status_update/BEAT_history_rss.xml</string>
 </resources>

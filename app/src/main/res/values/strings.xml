@@ -5,9 +5,6 @@
     <string name="alert_ask_to_exit">Do you want to exit?</string>
     <string name="alert_loading">Please wait...</string>
 
-    <!-- String Resources for Radio Screen -->
-    <string name="logo_content">A Community Outreach of \nAnderson University</string>
-
     <!-- String Resources for Web Screen -->
     <string name="Website">Website</string>
 
@@ -28,4 +25,7 @@
     <string name="shout_out">Shout Out</string>
     <string name="Thanks_for_sharing">Thanks for sharing! Listen to Bristol Beat and
         you might hear yourself on the radio!</string>
+
+    <!-- String Resource for Recent Playlist Page -->
+    <string name="Recent_Playlist">Recent Playlist</string>
 </resources>

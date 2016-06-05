@@ -8,6 +8,7 @@ import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -152,6 +153,10 @@ public class ShoutOutScreen extends CustomScreen implements OnClickListener {
             return null;
         }
 
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+        }
     }
 
     private class UploadTask extends AsyncTask<String, Void, String> {
@@ -193,8 +198,10 @@ public class ShoutOutScreen extends CustomScreen implements OnClickListener {
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
 
-            Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
             prgLoading.setVisibility(View.GONE);
+
+            Log.e("ShoutOutScreen", "uploading result: " + result);
+            Toast.makeText(getActivity(), R.string.Thanks_for_sharing, Toast.LENGTH_SHORT).show();
         }
     }
 }

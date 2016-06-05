@@ -26,4 +26,6 @@
 
     <!-- String Resource for Shout Out Page -->
     <string name="shout_out">Shout Out</string>
+    <string name="Thanks_for_sharing">Thanks for sharing! Listen to Bristol Beat and
+        you might hear yourself on the radio!</string>
 </resources>

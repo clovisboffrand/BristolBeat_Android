@@ -9,7 +9,7 @@
     <color name="no_color">#00ffffff</color>
     <color name="playback_background">#c6d1ea</color>
 
-    <color name="tab_bar_tint_color">#f3731c</color>
-    <color name="actionbar_tint_color">#f3731c</color>
-    <color name="global_tint_color">#f3731c</color>
+    <color name="tab_bar_tint_color">#13016c</color>
+    <color name="actionbar_tint_color">#13016c</color>
+    <color name="global_tint_color">#13016c</color>
 </resources>

@@ -132,7 +132,7 @@
             android:layout_width="240dp"
             android:layout_height="40dp"
             android:layout_marginTop="@dimen/content_padding"
-            android:background="@drawable/btn_yellow"
+            android:background="@drawable/btn_set_alarm"
             android:tag="0"
             android:text="@string/Set_Alarm"
             android:textColor="@android:color/white"

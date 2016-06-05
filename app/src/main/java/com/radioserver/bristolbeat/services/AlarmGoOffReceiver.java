@@ -1,7 +1,7 @@
-package com.radioserver.wqme.services;
+package com.radioserver.bristolbeat.services;
 
-import com.radioserver.wqme.helpers.AlarmHelper;
-import com.radioserver.wqme.screens.Main;
+import com.radioserver.bristolbeat.helpers.AlarmHelper;
+import com.radioserver.bristolbeat.screens.Main;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

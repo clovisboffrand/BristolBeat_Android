@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">WQME</string>
+    <string name="app_name">Bristol Beat</string>
 
     <string name="alert_ask_to_exit">Do you want to exit?</string>
     <string name="alert_loading">Please wait...</string>

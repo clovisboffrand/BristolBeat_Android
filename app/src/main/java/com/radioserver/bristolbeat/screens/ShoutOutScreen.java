@@ -2,7 +2,7 @@
  * Project    : iRadio
  * Author     : Hoang San
  **/
-package com.radioserver.wqme.screens;
+package com.radioserver.bristolbeat.screens;
 
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
@@ -19,9 +19,9 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.radioserver.wqme.R;
-import com.radioserver.wqme.helpers.HttpFileUploader;
-import com.radioserver.wqme.helpers.RecordingHelper;
+import com.radioserver.bristolbeat.R;
+import com.radioserver.bristolbeat.helpers.HttpFileUploader;
+import com.radioserver.bristolbeat.helpers.RecordingHelper;
 
 import org.san.iphonestyle.CustomScreen;
 

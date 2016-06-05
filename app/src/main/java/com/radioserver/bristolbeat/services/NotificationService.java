@@ -1,4 +1,4 @@
-package com.radioserver.wqme.services;
+package com.radioserver.bristolbeat.services;
 
 import android.app.Notification;
 import android.app.Service;

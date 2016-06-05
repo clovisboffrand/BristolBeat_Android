@@ -1,7 +1,7 @@
-package com.radioserver.wqme.screens;
+package com.radioserver.bristolbeat.screens;
 
-import com.radioserver.wqme.R;
-import com.radioserver.wqme.helpers.UserProfileSingleton;
+import com.radioserver.bristolbeat.R;
+import com.radioserver.bristolbeat.helpers.UserProfileSingleton;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package com.radioserver.wqme.screens;
+package com.radioserver.bristolbeat.screens;
 
 import org.san.iphonestyle.CustomScreen;
 
@@ -13,8 +13,8 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
-import com.radioserver.wqme.R;
-import com.radioserver.wqme.helpers.SharedAlgorithm;
+import com.radioserver.bristolbeat.R;
+import com.radioserver.bristolbeat.helpers.SharedAlgorithm;
 
 /**
  * Custom class for Web Screen

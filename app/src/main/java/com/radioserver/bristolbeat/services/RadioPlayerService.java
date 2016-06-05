@@ -1,4 +1,4 @@
-package com.radioserver.wqme.services;
+package com.radioserver.bristolbeat.services;
 
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -9,8 +9,8 @@ import android.content.IntentFilter;
 import android.util.Log;
 import android.widget.RemoteViews;
 
-import com.radioserver.wqme.R;
-import com.radioserver.wqme.screens.Main;
+import com.radioserver.bristolbeat.R;
+import com.radioserver.bristolbeat.screens.Main;
 import com.spoledge.aacdecoder.MultiPlayer;
 import com.spoledge.aacdecoder.PlayerCallback;
 

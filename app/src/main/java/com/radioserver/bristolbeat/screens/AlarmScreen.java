@@ -1,4 +1,4 @@
-package com.radioserver.wqme.screens;
+package com.radioserver.bristolbeat.screens;
 
 import java.util.Calendar;
 import java.util.Timer;
@@ -6,9 +6,9 @@ import java.util.TimerTask;
 
 import org.san.iphonestyle.CustomScreen;
 
-import com.radioserver.wqme.R;
-import com.radioserver.wqme.helpers.AlarmHelper;
-import com.radioserver.wqme.helpers.UserProfileSingleton;
+import com.radioserver.bristolbeat.R;
+import com.radioserver.bristolbeat.helpers.AlarmHelper;
+import com.radioserver.bristolbeat.helpers.UserProfileSingleton;
 
 import android.os.Bundle;
 import android.os.Handler;

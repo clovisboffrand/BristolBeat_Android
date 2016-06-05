@@ -1,4 +1,4 @@
-package com.radioserver.wqme.helpers;
+package com.radioserver.bristolbeat.helpers;
 
 import android.content.Context;
 import android.content.Intent;

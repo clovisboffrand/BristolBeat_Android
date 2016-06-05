@@ -1,10 +1,10 @@
-package com.radioserver.wqme.screens;
+package com.radioserver.bristolbeat.screens;
 
 import org.san.iphonestyle.CustomScreen;
 
-import com.radioserver.wqme.R;
-import com.radioserver.wqme.services.RadioPlayerService;
-import com.radioserver.wqme.helpers.SharedAlgorithm;
+import com.radioserver.bristolbeat.R;
+import com.radioserver.bristolbeat.services.RadioPlayerService;
+import com.radioserver.bristolbeat.helpers.SharedAlgorithm;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

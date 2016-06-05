@@ -1,12 +1,13 @@
-package com.radioserver.wqme.screens;
-
-import android.os.Bundle;
-
-import com.radioserver.wqme.R;
+package com.radioserver.bristolbeat.screens;
 
 import org.san.iphonestyle.CustomTab;
 
-public class SocialTab extends CustomTab {
+import android.os.Bundle;
+
+import com.radioserver.bristolbeat.R;
+
+public class AlarmTab extends CustomTab {
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,7 +16,8 @@ public class SocialTab extends CustomTab {
 
     @Override
     protected void setRootScreen() {
-        SocialScreen screen = new SocialScreen();
+        AlarmScreen screen = new AlarmScreen();
         this.setScreen(getSupportFragmentManager(), screen);
     }
+
 }

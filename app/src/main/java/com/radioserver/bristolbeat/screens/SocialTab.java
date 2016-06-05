@@ -1,21 +1,12 @@
-/**
- * Project    : iRadio
- * Author     : Hoang San
- **/
-package com.radioserver.wqme.screens;
-
-/**
- * @author Hoang San
- */
+package com.radioserver.bristolbeat.screens;
 
 import android.os.Bundle;
 
-import com.radioserver.wqme.R;
+import com.radioserver.bristolbeat.R;
 
 import org.san.iphonestyle.CustomTab;
 
-public class ShoutOutTab extends CustomTab {
-
+public class SocialTab extends CustomTab {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +15,7 @@ public class ShoutOutTab extends CustomTab {
 
     @Override
     protected void setRootScreen() {
-        ShoutOutScreen screen = new ShoutOutScreen();
+        SocialScreen screen = new SocialScreen();
         this.setScreen(getSupportFragmentManager(), screen);
     }
 }

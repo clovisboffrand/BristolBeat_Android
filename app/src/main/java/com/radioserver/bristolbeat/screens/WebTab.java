@@ -1,8 +1,8 @@
-package com.radioserver.wqme.screens;
+package com.radioserver.bristolbeat.screens;
 
 import android.os.Bundle;
 
-import com.radioserver.wqme.R;
+import com.radioserver.bristolbeat.R;
 
 import org.san.iphonestyle.CustomTab;
 

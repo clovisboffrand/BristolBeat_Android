@@ -1,6 +1,6 @@
 package org.san.iphonestyle;
 
-import com.radioserver.wqme.R;
+import com.radioserver.bristolbeat.R;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;

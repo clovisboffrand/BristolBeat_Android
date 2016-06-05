@@ -5,7 +5,7 @@
  * Copyright (c) 2011 San Vo. All rights reserved.
  */
 
-package com.radioserver.wqme.helpers;
+package com.radioserver.bristolbeat.helpers;
 
 import android.util.Log;
 

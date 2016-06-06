@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +19,7 @@ import com.radioserver.bristolbeat.R;
 import com.radioserver.bristolbeat.helpers.SharedAlgorithm;
 import com.radioserver.bristolbeat.models.RadioSong;
 import com.radioserver.bristolbeat.services.RadioPlayerService;
-import com.radioserver.bristolbeat.utils.CommonUtils;
+import com.radioserver.bristolbeat.helpers.CommonUtils;
 
 import java.util.List;
 

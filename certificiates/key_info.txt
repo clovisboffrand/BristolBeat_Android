@@ -1,0 +1,8 @@
+- Keystore file
+  star_keystore.jks
+  password: asdf1234
+
+- Key Alias
+  star_key
+  password: asdf1234
+  organization: Star Company

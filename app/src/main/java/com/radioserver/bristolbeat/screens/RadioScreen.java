@@ -182,7 +182,7 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
         if (currentSong != null) {
             tvTitle.setText(currentSong.getTitle());
             tvArtist.setText(currentSong.getDescription());
-            CommonUtils.loadImage(ivSongLogo, currentSong.getThumbnailUrl(), 0);
+            CommonUtils.loadImage(ivSongLogo, currentSong.getThumbnailUrl(), R.drawable.img_logo_full);
         }
     }
 }

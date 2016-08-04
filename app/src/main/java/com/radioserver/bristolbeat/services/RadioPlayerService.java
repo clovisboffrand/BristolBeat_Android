@@ -6,6 +6,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.media.AudioTrack;
 import android.os.Handler;
 import android.util.Log;
 import android.widget.RemoteViews;
@@ -95,6 +96,7 @@ public class RadioPlayerService {
         public void playerStarted() {
             mIsStopNotification = false;
             mIsPlaying = true;
+
             mContext.startService(new Intent(mContext, NotificationService.class));
             notifyPlayerStateChange();
         }
@@ -124,6 +126,25 @@ public class RadioPlayerService {
         public void playerMetadata(String s, String s1) {
 
         }
+
+        @Override
+        public void playerAudioTrackCreated(AudioTrack audioTrack) {
+            System.out.println("1234");
+            bluetoothNotifyChange();
+//            RadioSong currentSong = RadioPlayerService.getInstance().getCurrentSong();
+//            System.out.println("anshul222"+currentSong.getTitle());
+//            if (currentSong != null) {
+//                System.out.println("anshul"+currentSong.getTitle());
+//                Intent avrcp = new Intent("com.android.music.metachanged");
+//                avrcp.putExtra("track", "L lag gye");
+//                //avrcp.putExtra("artist", currentSong.getTitle());
+//               // avrcp.putExtra("album", currentSong.getDescription());
+//                mContext.sendBroadcast(avrcp);
+//                //tvArtist.setText(currentSong.getDescription());
+//                //CommonUtils.loadImage(ivSongLogo, currentSong.getThumbnailUrl(), R.drawable.img_logo_full);
+//            }
+//
+        }
     };
 
     public boolean isPlaying() {
@@ -132,6 +153,7 @@ public class RadioPlayerService {
 
     public void initialService(Context context) {
         mContext = context.getApplicationContext();
+
         mPlayer = new MultiPlayer(mPlayerCallback);
         mRadioLink = mContext.getString(R.string.STREAM_URL);
 
@@ -254,4 +276,13 @@ public class RadioPlayerService {
             mIsGetRecentPlayList = true;
         }
     }
+
+    private void bluetoothNotifyChange() {
+        RadioSong currentSong = RadioPlayerService.getInstance().getCurrentSong();
+        Intent i = new Intent("com.android.music.playstatechanged");
+        i.putExtra("track", currentSong.getTitle());
+        System.out.println("12345" + currentSong.getTitle());
+        mContext.sendBroadcast(i);
+    }
+
 }
